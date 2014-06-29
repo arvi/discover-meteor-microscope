@@ -2,6 +2,7 @@
 Errors = new Meteor.Collection(null);
 
 throwError = function (message) {
+	clearErrors();
 	Errors.insert({message: message, seen: false});
 };
 
